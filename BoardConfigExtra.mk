@@ -5,4 +5,4 @@ DEVICE_PACKAGE_OVERLAYS += vendor/extra/blur/overlay
 TARGET_HAVE_UI_BLUR := true
 
 # QC Perf
-TARGET_HAVE_QC_PERF := true
+#TARGET_HAVE_QC_PERF := true
