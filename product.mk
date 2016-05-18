@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     libuiblur \
     Blur
 
+ifeq ($(TARGET_HAVE_UI_BLUR),true)
 # QC ART
 PRODUCT_PACKAGES += \
     libqc-art \
@@ -15,3 +16,4 @@ PRODUCT_PACKAGES += \
 # QC Skia
 PRODUCT_PACKAGES += \
     libqc-skia
+endif
