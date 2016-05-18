@@ -1,7 +1,7 @@
 # Blur
 PRODUCT_PACKAGES += \
     libuiblur \
-    Blur.h
+    Blur
 
 # QC ART
 PRODUCT_PACKAGES += \

@@ -14,7 +14,7 @@ LOCAL_MULTILIB := both
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := Blur.h
+LOCAL_MODULE := Blur
 LOCAL_MODULE_OWNER := qcom
 LOCAL_SRC_FILES := Blur.h
 LOCAL_MODULE_TAGS := optional
