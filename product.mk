@@ -3,7 +3,7 @@ PRODUCT_PACKAGES += \
     libuiblur \
     Blur
 
-ifeq ($(TARGET_HAVE_UI_BLUR),true)
+ifeq ($(TARGET_HAVE_QC_PERF),true)
 # QC ART
 PRODUCT_PACKAGES += \
     libqc-art \
