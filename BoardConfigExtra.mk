@@ -6,3 +6,5 @@ TARGET_HAVE_UI_BLUR := true
 
 # QC Perf
 #TARGET_HAVE_QC_PERF := true
+
+-include vendor/rashed/BoardConfigExtra.mk

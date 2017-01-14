@@ -17,3 +17,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqc-skia
 endif
+
+PRODUCT_PACKAGES += auditd
+
+$(call prepend-product-if-exists, vendor/rashed/product.mk)
