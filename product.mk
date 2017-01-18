@@ -20,4 +20,6 @@ endif
 
 PRODUCT_PACKAGES += auditd
 
+PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
+
 $(call prepend-product-if-exists, vendor/rashed/product.mk)
