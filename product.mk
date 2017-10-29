@@ -22,4 +22,11 @@ PRODUCT_PACKAGES += auditd
 
 PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
 
+# Themes
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PROPERTY_OVERRIDES += ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
+PRODUCT_PROPERTY_OVERRIDES += ro.com.google.ime.theme_id=5
+PRODUCT_PACKAGES += \
+    PixelTheme
+
 $(call prepend-product-if-exists, vendor/rashed/product.mk)
