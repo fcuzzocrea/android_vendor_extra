@@ -30,3 +30,4 @@ PRODUCT_PACKAGES += \
     PixelTheme
 
 $(call prepend-product-if-exists, vendor/rashed/product.mk)
+$(call prepend-product-if-exists, vendor/extra/gapps.mk)
