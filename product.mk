@@ -29,5 +29,9 @@ PRODUCT_PROPERTY_OVERRIDES += ro.com.google.ime.theme_id=5
 PRODUCT_PACKAGES += \
     PixelTheme
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.vc_call_vol_steps=7 \
+    ro.config.media_vol_steps=18
+
 $(call prepend-product-if-exists, vendor/rashed/product.mk)
 $(call prepend-product-if-exists, vendor/extra/gapps.mk)
