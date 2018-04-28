@@ -50,7 +50,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libhalide_hexagon_remote_skel
 LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := lib/arm/libhalide_hexagon_host.so
+LOCAL_SRC_FILES := lib/arm/libhalide_hexagon_remote_skel.so
 LOCAL_STRIP_MODULE := false
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
