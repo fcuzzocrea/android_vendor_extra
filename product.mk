@@ -31,7 +31,10 @@ DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.com.google.ime.theme_id=5
 PRODUCT_PACKAGES += \
+    GoogleFonts \
     PixelTheme
+
+ADDITIONAL_FONTS_FILE += vendor/extra/google-fonts.xml
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
