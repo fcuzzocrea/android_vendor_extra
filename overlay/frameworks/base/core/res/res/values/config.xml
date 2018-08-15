@@ -6,4 +6,6 @@
   <string name="config_headlineFontFamily">google-sans</string>
   <string name="config_headlineFontFamilyLight">google-sans</string>
   <string name="config_headlineFontFeatureSettings">ss03</string>
+
+  <bool name="config_swipe_up_gesture_setting_available">true</bool>
 </resources>
