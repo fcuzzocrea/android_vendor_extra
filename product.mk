@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += auditd
 PRODUCT_COPY_FILES += \
     vendor/extra/lineage-package_cache.rc:system/etc/init/lineage-package_cache.rc
 
-PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.opa.eligible_device=true
 
 # Themes
 DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay
