@@ -39,7 +39,7 @@ ADDITIONAL_FONTS_FILE += vendor/extra/google-fonts.xml
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
-    ro.config.media_vol_steps=18
+    ro.config.media_vol_steps=25
 
 -include vendor/rashed/product.mk
 ifneq ($(DISABLE_GAPPS),true)
