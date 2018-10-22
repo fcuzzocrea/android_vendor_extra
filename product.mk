@@ -19,6 +19,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
     ro.config.media_vol_steps=25
 
+-include vendor/google_pixel/product.mk
+
 -include vendor/rashed/product.mk
 ifneq ($(DISABLE_GAPPS),true)
 -include vendor/extra/gapps.mk
