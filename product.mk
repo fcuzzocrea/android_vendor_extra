@@ -1,17 +1,8 @@
-# Disable package cache on all builds
-PRODUCT_COPY_FILES += \
-    vendor/extra/lineage-package_cache.rc:system/etc/init/lineage-package_cache.rc
-
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.opa.eligible_device=true
 
 # Themes
 DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/extra/overlay
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.com.google.ime.theme_id=5
-PRODUCT_PACKAGES += \
-    GoogleFonts \
-    PixelTheme
 
 ADDITIONAL_FONTS_FILE += vendor/extra/google-fonts.xml
 
@@ -21,7 +12,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 -include vendor/google_pixel/product.mk
 
--include vendor/rashed/product.mk
 ifneq ($(DISABLE_GAPPS),true)
 -include vendor/extra/gapps.mk
-endif
+endif # Disable GApps
