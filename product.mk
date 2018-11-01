@@ -4,7 +4,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.opa.eligible_device=true
 DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/extra/overlay
 
-ADDITIONAL_FONTS_FILE += vendor/extra/google-fonts.xml
+DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay-lineage
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/extra/overlay-lineage
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
