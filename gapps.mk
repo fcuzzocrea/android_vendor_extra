@@ -3,20 +3,20 @@ LOCAL_PATH := $(call my-dir)
 STOCK_GAPPS_DEVICES += \
     %berkeley \
     %ether \
-    %nash
-
-CUSTOM_GAPPS_DEVICES += \
+    %nash \
     %shamu
 
 NANO_GAPPS_DEVICES += \
     %bacon \
-    %jfltevzw \
-    %molly
+    %molly \
+    %yellowstone
 
 EXCLUDE_GAPPS_DEVICES += \
     %flo \
     %foster \
     %fugu \
+    %jfltevzw \
+    %jfltexx \
     %m8 \
     %tv_molly
 
@@ -64,7 +64,7 @@ GAPPS_EXCLUDED_PACKAGES += \
 endif # Custom GApps
 
 ifneq ($(filter $(NANO_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
-GAPPS_VARIANT := nano
+GAPPS_VARIANT := pico
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 endif # Nano GApps
