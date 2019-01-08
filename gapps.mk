@@ -8,22 +8,25 @@ STOCK_GAPPS_DEVICES += \
 
 NANO_GAPPS_DEVICES += \
     %bacon \
-    %molly \
+    %molly
+
+PICO_GAPPS_DEVICES += \
+    %jfltevzw \
+    %jfltexx \
     %yellowstone
 
-EXCLUDE_GAPPS_DEVICES += \
+EXCLUDE_GOOGLE_SYSUI_DEVICES += \
     %flo \
     %foster \
     %fugu \
-    %jfltevzw \
-    %jfltexx \
     %m8 \
     %tv_molly
 
 GAPPS_DEVICES += \
     $(STOCK_GAPPS_DEVICES) \
-    $(CUSTOM_GAPPS_DEVICES) \
+    $(MOST_GAPPS_DEVICES) \
     $(NANO_GAPPS_DEVICES) \
+    $(PICO_GAPPS_DEVICES) \
     $(PIXEL_CODENAMES)
 
 ifneq ($(filter $(PIXEL_CODENAMES),$(TARGET_PRODUCT)),)
@@ -41,7 +44,7 @@ GAPPS_EXCLUDED_PACKAGES += \
     Turbo
 endif # Stock GApps
 
-ifneq ($(filter $(CUSTOM_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
+ifneq ($(filter $(MOST_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := stock
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
@@ -61,13 +64,36 @@ GAPPS_EXCLUDED_PACKAGES += \
     Videos \
     EditorSlides \
     Turbo
-endif # Custom GApps
+endif # Most GApps
 
 ifneq ($(filter $(NANO_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
-GAPPS_VARIANT := pico
+GAPPS_VARIANT := nano
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 endif # Nano GApps
+
+ifneq ($(filter $(PICO_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
+GAPPS_VARIANT := pico
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := true
+GAPPS_EXCLUDED_PACKAGES += \
+    CalSync \
+    DialerFramework \
+    BatteryUsage \
+    FaceDetect \
+    FaceUnlock \
+    MarkupGoogle \
+    Speech \
+    Wellbeing \
+    PixelLauncherIcons \
+    GoogleTTS \
+    Wallpapers \
+    Turbo \
+    GoogleCalendarSyncAdapter \
+    GoogleContactsSyncAdapter \
+    CompanionDeviceManager \
+    GoogleFeedback
+endif # Pico GApps
 
 ifneq ($(filter $(GAPPS_DEVICES),$(TARGET_PRODUCT)),)
 $(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
