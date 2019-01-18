@@ -13,6 +13,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri="http://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 
+# Recovery ADB keys
+PRODUCT_COPY_FILES += \
+    vendor/extra/adb_keys:recovery/root/adb_keys
+
 -include vendor/google_pixel/product.mk
 
 ifneq ($(DISABLE_GAPPS),true)
