@@ -17,6 +17,11 @@ PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri="http://updater.oddsolutions.u
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
 
+ifneq ($(filter berkeley,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    HwCamera2
+endif
+
 -include vendor/google_pixel/product.mk
 
 ifneq ($(DISABLE_GAPPS),true)
