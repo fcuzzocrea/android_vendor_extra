@@ -22,6 +22,11 @@ PRODUCT_PACKAGES += \
     HwCamera2
 endif
 
+ifneq ($(filter nash,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    MotoCamera2
+endif
+
 -include vendor/google_pixel/product.mk
 
 ifneq ($(DISABLE_GAPPS),true)
