@@ -16,20 +16,15 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),nash)
-
 include $(CLEAR_VARS)
-LOCAL_MODULE := MotoCamera2
+LOCAL_MODULE := MotCamera2
 LOCAL_MODULE_OWNER := motorola
-LOCAL_SRC_FILES := proprietary/priv-app/MotoCamera2/MotoCamera2.apk
+LOCAL_SRC_FILES := MotCamera2.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_OVERRIDES_PACKAGES := Camera2
 LOCAL_OVERRIDES_PACKAGES := Snap
 include $(BUILD_PREBUILT)
-
-endif

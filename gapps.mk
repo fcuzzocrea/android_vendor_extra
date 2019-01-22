@@ -15,11 +15,12 @@ PICO_GAPPS_DEVICES += \
     %jfltexx \
     %yellowstone
 
+FLASH_GAPPS_DEVICES += \
+    %flo
+
 EXCLUDE_GOOGLE_SYSUI_DEVICES += \
-    %flo \
     %foster \
     %fugu \
-    %m8 \
     %tv_molly
 
 GAPPS_DEVICES += \
@@ -27,7 +28,14 @@ GAPPS_DEVICES += \
     $(MOST_GAPPS_DEVICES) \
     $(NANO_GAPPS_DEVICES) \
     $(PICO_GAPPS_DEVICES) \
+    $(FLASH_GAPPS_DEVICES) \
     $(PIXEL_CODENAMES)
+
+ifneq ($(filter $(EXCLUDE_GOOGLE_SYSUI_DEVICES),$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    FDroid \
+    FDroid-Privledged
+endif
 
 ifneq ($(filter $(PIXEL_CODENAMES),$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := stock
