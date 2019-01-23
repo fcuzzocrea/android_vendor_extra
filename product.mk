@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES := \
     vendor/extra/HwCamera2/lib/arm/libjni_front_panorama_camera2.so:system/priv-app/HwCamera2/lib/arm/libjni_front_panorama_camera2.so \
     vendor/extra/HwCamera2/lib/arm/libjni_mrc_cg_filters_camera2.so:system/priv-app/HwCamera2/lib/arm/libjni_mrc_cg_filters_camera2.so \
     vendor/extra/HwCamera2/lib/arm/libJniVoiceCapture.so:system/priv-app/HwCamera2/lib/arm/libJniVoiceCapture.so \
-    vendor/extra/HwCamera2/lib/arm/libmorpho_memory_allocator.so:system/priv-app/HwCamera2/lib/arm/libmorpho_memory_allocator.so \ 
+    vendor/extra/HwCamera2/lib/arm/libmorpho_memory_allocator.so:system/priv-app/HwCamera2/lib/arm/libmorpho_memory_allocator.so \
     vendor/extra/HwCamera2/lib/arm/libmorpho_panorama_gp.so:system/priv-app/HwCamera2/lib/arm/libmorpho_panorama_gp.so \
     vendor/extra/HwCamera2/lib/arm/libscanner.so:system/priv-app/HwCamera2/lib/arm/libscanner.so \
     vendor/extra/HwCamera2/lib/arm/libTargetTracking.so:system/priv-app/HwCamera2/lib/arm/libTargetTracking.so \
