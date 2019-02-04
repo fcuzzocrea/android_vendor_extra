@@ -8,6 +8,8 @@ STOCK_GAPPS_DEVICES += \
 
 NANO_GAPPS_DEVICES += \
     %bacon \
+    %hlte \
+    %hltetmo \
     %molly
 
 PICO_GAPPS_DEVICES += \
