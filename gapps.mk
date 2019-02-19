@@ -50,7 +50,8 @@ GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 GAPPS_EXCLUDED_PACKAGES += \
     GoogleCamera \
-    Turbo
+    Turbo \
+    MarkupGoogle
 endif # Stock GApps
 
 ifneq ($(filter $(MOST_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
@@ -72,13 +73,17 @@ GAPPS_EXCLUDED_PACKAGES += \
     PlayGames \
     Videos \
     EditorSlides \
-    Turbo
+    Turbo \
+    MarkupGoogle
 endif # Most GApps
 
 ifneq ($(filter $(NANO_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := nano
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
+GAPPS_EXCLUDED_PACKAGES += \
+    MarkupGoogle \
+    Turbo
 endif # Nano GApps
 
 ifneq ($(filter $(PICO_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
@@ -101,7 +106,8 @@ GAPPS_EXCLUDED_PACKAGES += \
     GoogleCalendarSyncAdapter \
     GoogleContactsSyncAdapter \
     CompanionDeviceManager \
-    GoogleFeedback
+    GoogleFeedback \
+    MarkupGoogle
 endif # Pico GApps
 
 ifneq ($(filter $(GAPPS_DEVICES),$(TARGET_PRODUCT)),)
