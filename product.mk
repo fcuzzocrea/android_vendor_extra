@@ -11,7 +11,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
     ro.config.media_vol_steps=25
 
-PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri="http://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
+PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 
 # Recovery ADB keys
 PRODUCT_COPY_FILES += \
