@@ -3,8 +3,7 @@ LOCAL_PATH := $(call my-dir)
 STOCK_GAPPS_DEVICES += \
     %berkeley \
     %ether \
-    %nash \
-    %shamu
+    %nash
 
 NANO_GAPPS_DEVICES += \
     %bacon \
@@ -16,6 +15,9 @@ PICO_GAPPS_DEVICES += \
     %jfltevzw \
     %jfltexx \
     %yellowstone
+
+MOST_GAPPS_DEVICES += \
+    %shamu
 
 FLASH_GAPPS_DEVICES += \
     %flo
