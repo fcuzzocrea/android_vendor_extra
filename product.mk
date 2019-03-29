@@ -13,6 +13,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 
+# Android ADB keys
+PRODUCT_COPY_FILES += \
+    vendor/extra/adb_keys:root/adb_keys
+
 # Recovery ADB keys
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
