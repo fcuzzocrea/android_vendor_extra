@@ -49,8 +49,11 @@ PRODUCT_PACKAGES += \
     MotCamera2
 endif
 
--include vendor/google_pixel/product.mk
+ifneq ($(filter %fugu,$(TARGET_PRODUCT)),)
+DISABLE_GAPPS := true
+endif
 
 ifneq ($(DISABLE_GAPPS),true)
+-include vendor/google_pixel/product.mk
 -include vendor/extra/gapps.mk
 endif # Disable GApps
