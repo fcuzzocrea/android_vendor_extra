@@ -3,7 +3,11 @@ LOCAL_PATH := $(call my-dir)
 STOCK_GAPPS_DEVICES += \
     %berkeley \
     %ether \
-    %nash
+    %nash \
+    %klte
+
+MICRO_GAPPS_DEVICES += \
+    %shieldtablet
 
 NANO_GAPPS_DEVICES += \
     %bacon \
@@ -23,6 +27,7 @@ FLASH_GAPPS_DEVICES += \
     %flo
 
 EXCLUDE_GOOGLE_SYSUI_DEVICES += \
+    %hammerhead \
     %foster \
     %fugu \
     %tv_molly
@@ -30,6 +35,7 @@ EXCLUDE_GOOGLE_SYSUI_DEVICES += \
 GAPPS_DEVICES += \
     $(STOCK_GAPPS_DEVICES) \
     $(MOST_GAPPS_DEVICES) \
+    $(MICRO_GAPPS_DEVICES) \
     $(NANO_GAPPS_DEVICES) \
     $(PICO_GAPPS_DEVICES) \
     $(PIXEL_CODENAMES)
@@ -48,6 +54,17 @@ endif # Pixel GApps
 
 ifneq ($(filter $(STOCK_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := stock
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := true
+GAPPS_EXCLUDED_PACKAGES += \
+    GoogleCamera \
+    Turbo \
+    MarkupGoogle
+endif # Stock GApps
+
+
+ifneq ($(filter $(MICRO_GAPPS_DEVICES),$(TARGET_PRODUCT)),)
+GAPPS_VARIANT := micro
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 GAPPS_EXCLUDED_PACKAGES += \
