@@ -40,12 +40,6 @@ GAPPS_DEVICES += \
     $(PICO_GAPPS_DEVICES) \
     $(PIXEL_CODENAMES)
 
-ifneq ($(filter $(EXCLUDE_GOOGLE_SYSUI_DEVICES),$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    FDroid \
-    FDroid-Privledged
-endif
-
 ifneq ($(filter $(PIXEL_CODENAMES),$(TARGET_PRODUCT)),)
 GAPPS_VARIANT := stock
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
@@ -130,5 +124,5 @@ GAPPS_EXCLUDED_PACKAGES += \
 endif # Pico GApps
 
 ifneq ($(filter $(GAPPS_DEVICES),$(TARGET_PRODUCT)),)
-$(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
+WITH_GMS := true
 endif # GApps Inclusion
