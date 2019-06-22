@@ -49,11 +49,17 @@ PRODUCT_PACKAGES += \
     MotCamera2
 endif
 
-ifneq ($(filter %fugu,$(TARGET_PRODUCT)),)
+EXCLUDE_GOOGLE_SERVICES_DEVICES += \
+    %hammerhead \
+    %jfltexx \
+    %foster \
+    %fugu \
+    %tv_molly
+
+ifneq ($(filter $(EXCLUDE_GOOGLE_SERVICES_DEVICES),$(TARGET_PRODUCT)),)
 DISABLE_GAPPS := true
 endif
 
 ifneq ($(DISABLE_GAPPS),true)
 -include vendor/google_pixel/product.mk
--include vendor/extra/gapps.mk
 endif # Disable GApps
