@@ -50,10 +50,14 @@ PRODUCT_PACKAGES += \
 endif
 
 EXCLUDE_GOOGLE_SERVICES_DEVICES += \
-    %hammerhead \
-    %jfltexx \
+    %flo \
     %foster \
     %fugu \
+    %hammerhead \
+    %jfltexx \
+    %m8 \
+    %m8d \
+    %molly \
     %tv_molly
 
 ifneq ($(filter $(EXCLUDE_GOOGLE_SERVICES_DEVICES),$(TARGET_PRODUCT)),)
