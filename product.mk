@@ -55,10 +55,9 @@ PRODUCT_COPY_FILES := \
     vendor/extra/MotCamera2/lib/libMotDoF.so:system/lib/libMotDoF.so \
     vendor/extra/MotCamera2/lib/libSNPE.so:system/lib/libSNPE.so \
     vendor/extra/MotCamera2/lib/libSNPExecutor.so:system/lib/libSNPExecutor.so \
-    vendor/extra/MotCamera2/lib/libarcso:system/lib/ft_agegender_estimation.so:system/lib/ft_agegender_estimation.so \
-    vendor/extra/MotCamera2/lib/libarcso:system/lib/ft_beautyshot.so:system/lib/ft_beautyshot.so \
-    vendor/extra/MotCamera2/lib/libarcso:system/lib/ft_dualcam_refocus.so:system/lib/ft_dualcam_refocus.so \
-    vendor/extra/MotCamera2/lib/libbacktrace.so:system/lib/libbacktrace.so \
+    vendor/extra/MotCamera2/lib/libarcsoft_agegender_estimation.so:system/lib/libarcsoft_agegender_estimation.so \
+    vendor/extra/MotCamera2/lib/libarcsoft_beautyshot.so:system/lib/libarcsoft_beautyshot.so \
+    vendor/extra/MotCamera2/lib/libarcsoft_dualcam_refocus.so:system/lib/libarcsoft_dualcam_refocus.so \
     vendor/extra/MotCamera2/lib/libbsDepthWrapper_01_00_000.so:system/lib/libbsDepthWrapper_01_00_000.so \
     vendor/extra/MotCamera2/lib/libc++_shared.so:system/lib/libc++_shared.so \
     vendor/extra/MotCamera2/lib/libclearsight.so:system/lib/libclearsight.so \
@@ -68,7 +67,6 @@ PRODUCT_COPY_FILES := \
     vendor/extra/MotCamera2/lib/libframe_stack_wrapper_morpho_v4.so:system/lib/libframe_stack_wrapper_morpho_v4.so \
     vendor/extra/MotCamera2/lib/libframe_stack_wrapper_morpho_v5.so:system/lib/libframe_stack_wrapper_morpho_v5.so \
     vendor/extra/MotCamera2/lib/libgif.so:system/lib/libgif.so \
-    vendor/extra/MotCamera2/lib/libjpeg.so:system/lib/libjpeg.so \
     vendor/extra/MotCamera2/lib/liblenovo_panorama.so:system/lib/liblenovo_panorama.so \
     vendor/extra/MotCamera2/lib/libmcf-common.so:system/lib/libmcf-common.so \
     vendor/extra/MotCamera2/lib/libmcf-foundation.so:system/lib/libmcf-foundation.so \
@@ -84,7 +82,7 @@ PRODUCT_COPY_FILES := \
     vendor/extra/MotCamera2/lib/libmorpho_image_stab5.so:system/lib/libmorpho_image_stab5.so \
     vendor/extra/MotCamera2/lib/libmorpho_image_stabilizer4.so:system/lib/libmorpho_image_stabilizer4.so \
     vendor/extra/MotCamera2/lib/libmorpho_panorama_gp3.so:system/lib/libmorpho_panorama_gp3.so \
-    vendor/extra/MotCamera2/lib/libmorpho_sensor_fusion.so:system/lib/libmorpho_sensor_fusion.so
+    vendor/extra/MotCamera2/lib/libmorpho_sensor_fusion.so:system/lib/libmorpho_sensor_fusion.so \
     vendor/extra/MotCamera2/lib/libmorpho_super_resolution.so:system/lib/libmorpho_super_resolution.so \
     vendor/extra/MotCamera2/lib/libmotioncore_01_00_000.so:system/lib/libmotioncore_01_00_000.so \
     vendor/extra/MotCamera2/lib/libmpbase.so:system/lib/libmpbase.so \
