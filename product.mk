@@ -21,6 +21,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
 
+# Signing
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
+PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
+
+
 ifneq ($(filter %berkeley,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
     HwCamera2
