@@ -21,9 +21,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
     ro.config.media_vol_steps=25
 
-## OPA
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.opa.eligible_device=true
-
 ## Updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 
