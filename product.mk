@@ -32,9 +32,6 @@ PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
 DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/extra/overlay
 
-DEVICE_PACKAGE_OVERLAYS += vendor/extra/overlay-lineage
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/extra/overlay-lineage
-
 EXCLUDE_GOOGLE_SERVICES_DEVICES += \
     %flo \
     %foster \
