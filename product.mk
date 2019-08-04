@@ -46,10 +46,6 @@ EXCLUDE_GOOGLE_SERVICES_DEVICES += \
     %molly \
     %tv_molly
 
-ifneq ($(filter $(EXCLUDE_GOOGLE_SERVICES_DEVICES),$(TARGET_PRODUCT)),)
-DISABLE_GAPPS := true
-endif
-
-ifneq ($(DISABLE_GAPPS),true)
+ifeq ($(WITH_GMS),true)
 -include vendor/google_pixel/product.mk
 endif # Disable GApps
