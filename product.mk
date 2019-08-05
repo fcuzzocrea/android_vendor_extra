@@ -21,6 +21,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
     ro.config.media_vol_steps=25
 
+## OpenWeatherProvider
+PRODUCT_PACKAGES += OpenWeatherProviderPrebuilt
+
 ## Updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 
