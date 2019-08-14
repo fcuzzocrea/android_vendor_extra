@@ -2,6 +2,7 @@ PRODUCT_PACKAGES += \
     HwCamera2
 
 PRODUCT_COPY_FILES := \
+    vendor/extra/oem-cameras/HwCamera2/privapp-permissions-huawei.xml:system/etc/permissions/privapp-permissions-huawei.xml \
     vendor/extra/oem-cameras/HwCamera2/lib/arm/libfyusenet.so:system/priv-app/oem-cameras/HwCamera2/lib/arm/libfyusenet.so \
     vendor/extra/oem-cameras/HwCamera2/lib/arm/libgif_maker.so:system/priv-app/oem-cameras/HwCamera2/lib/arm/libgif_maker.so \
     vendor/extra/oem-cameras/HwCamera2/lib/arm/libHW_Pano_f.so:system/priv-app/oem-cameras/HwCamera2/lib/arm/libHW_Pano_f.so \
