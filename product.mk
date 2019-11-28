@@ -44,4 +44,4 @@ EXCLUDE_GOOGLE_SERVICES_DEVICES += \
 
 ifeq ($(WITH_GMS),true)
 -include vendor/google_pixel/product.mk
-endif # Disable GApps
+endif # WITH_GMS
