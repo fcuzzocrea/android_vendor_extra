@@ -1,3 +1,8 @@
+# Fonts
+ifeq ($(BOARD_HAS_LARGE_FILESYSTEM),true)
+    SMALLER_FONT_FOOTPRINT := true
+endif
+
 ## Signing
 #ifeq ($(BOARD_AVB_ENABLE),true)
 #BOARD_AVB_ALGORITHM := SHA256_RSA4096
