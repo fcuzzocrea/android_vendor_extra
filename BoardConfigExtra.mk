@@ -1,5 +1,5 @@
 # Fonts
-ifeq ($(BOARD_HAS_LARGE_FILESYSTEM),true)
+ifneq ($(BOARD_HAS_LARGE_FILESYSTEM),true)
     SMALLER_FONT_FOOTPRINT := true
 endif
 
