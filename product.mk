@@ -6,6 +6,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
 
+## Custom Cameras
+# river
+ifneq ($(filter %river,$(TARGET_PRODUCT)),)
+-include vendor/extra/oem-cameras/MotCamera2-denali/MotCamera2-denali.mk
+endif
+
 ## Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
