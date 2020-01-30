@@ -11,10 +11,6 @@ PRODUCT_COPY_FILES += \
 ifneq ($(filter %berkeley,$(TARGET_PRODUCT)),)
 -include vendor/extra/oem-cameras/HwCamera2/HwCamera2.mk
 endif
-# nash
-ifneq ($(filter %nash,$(TARGET_PRODUCT)),)
--include vendor/extra/oem-cameras/MotCamera2/MotCamera2.mk
-endif
 
 ## Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
