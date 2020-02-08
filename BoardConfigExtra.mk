@@ -3,6 +3,9 @@ ifneq ($(BOARD_HAS_LARGE_FILESYSTEM),true)
     SMALLER_FONT_FOOTPRINT := true
 endif
 
+# Product
+TARGET_COPY_OUT_PRODUCT := system/product
+
 ## Signing
 #ifeq ($(BOARD_AVB_ENABLE),true)
 #BOARD_AVB_ALGORITHM := SHA256_RSA4096
