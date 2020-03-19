@@ -25,7 +25,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater.oddsol
 
 ## Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
-PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
+#PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
 
 EXCLUDE_GOOGLE_SERVICES_DEVICES += \
     %flo \
