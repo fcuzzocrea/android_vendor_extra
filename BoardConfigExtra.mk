@@ -4,7 +4,11 @@ ifneq ($(BOARD_HAS_LARGE_FILESYSTEM),true)
 endif
 
 # Product
-TARGET_COPY_OUT_PRODUCT := system/product
+ifneq ($(filter %bonito %sargo %gts4lvwifi %crosshatch %blueline %flame %coral,$(TARGET_PRODUCT)),)
+    TARGET_COPY_OUT_PRODUCT := product
+else
+    TARGET_COPY_OUT_PRODUCT := system/product
+endif
 
 ## Signing
 #ifeq ($(BOARD_AVB_ENABLE),true)
