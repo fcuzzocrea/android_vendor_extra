@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += OpenWeatherProviderPrebuilt
 
 ## Updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.ota.allow_downgrade=true
 
 ## Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
