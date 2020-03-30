@@ -28,17 +28,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.ota.allow_downgrade=true
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
 #PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
 
-EXCLUDE_GOOGLE_SERVICES_DEVICES += \
-    %flo \
-    %foster \
-    %fugu \
-    %hammerhead \
-    %jfltexx \
-    %m8 \
-    %m8d \
-    %molly \
-    %tv_molly
-
 ifeq ($(WITH_GMS),true)
 -include vendor/google_pixel/product.mk
 endif # WITH_GMS
