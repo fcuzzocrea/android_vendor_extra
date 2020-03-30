@@ -6,12 +6,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
 
-## Custom Cameras
-# berkeley
-ifneq ($(filter %berkeley,$(TARGET_PRODUCT)),)
--include vendor/extra/oem-cameras/HwCamera2/HwCamera2.mk
-endif
-
 ## Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
