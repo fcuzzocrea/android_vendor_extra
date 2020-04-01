@@ -21,7 +21,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += OpenWeatherProviderPrebuilt
 
 ## Recovery
-PRODUCT_DEFAULT_PROPERTY_OVERRIDE += persist.sys.recovery_update=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
 ## Updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
