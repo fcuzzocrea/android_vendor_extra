@@ -32,5 +32,7 @@ PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
 #PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
 
 ifeq ($(WITH_GMS),true)
+ifneq ($(PRODUCT_IS_ATV),true)
 -include vendor/google_pixel/product.mk
+endif # PRODUCT_IS_ATV
 endif # WITH_GMS
