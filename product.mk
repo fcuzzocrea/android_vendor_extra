@@ -14,6 +14,16 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ## Recovery
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
+## Remove Dialer Apps
+ifneq ($(filter %yellowstone,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += remove-dialer
+endif
+
+## Remove Telephony Apps
+ifneq ($(filter %flo %gts4lvwifi %icosa,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += remove-telephony
+endif
+
 ## Updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += cm.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += cm.updater.allow_downgrading=true
