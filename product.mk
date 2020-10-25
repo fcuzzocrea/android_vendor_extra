@@ -25,7 +25,7 @@ PRODUCT_PACKAGES += remove-telephony
 endif
 
 ## Updater
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += cm.updater.uri="https://updater.oddsolutions.us/api/v1/{device}/{type}/{incr}"
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += cm.updater.uri="https://updater-api.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += cm.updater.allow_downgrading=true
 
 ## Signing
