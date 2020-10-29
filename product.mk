@@ -15,7 +15,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
 ## Remove Dialer Apps
-ifneq ($(filter %yellowstone,$(TARGET_PRODUCT)),)
+ifneq ($(filter %shieldtablet %yellowstone,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += remove-dialer
 endif
 
@@ -30,10 +30,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += cm.updater.allow_downgrading=true
 
 ## Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
-#PRODUCT_VERITY_SIGNING_KEY := vendor/certs/verity
-
-ifeq ($(WITH_GMS),true)
-ifneq ($(PRODUCT_IS_ATV),true)
--include vendor/google_pixel/product.mk
-endif # PRODUCT_IS_ATV
-endif # WITH_GMS
