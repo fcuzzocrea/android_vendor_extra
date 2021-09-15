@@ -12,6 +12,17 @@ ifneq ($(filter %river,$(TARGET_PRODUCT)),)
 -include vendor/extra/oem-cameras/MotCamera2-denali/MotCamera2-denali.mk
 endif
 
+## ih8sn
+PRODUCT_PACKAGES += ih8sn
+
+ifneq ("$(wildcard  vendor/extra/configs/ih8sn/ih8sn_$(subst lineage_,,$(TARGET_PRODUCT)).conf)","")
+PRODUCT_COPY_FILES += \
+    vendor/extra/configs/ih8sn/ih8sn_$(subst lineage_,,$(TARGET_PRODUCT)).conf:/system/etc/ih8sn.conf
+else
+PRODUCT_COPY_FILES += \
+    vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
+endif
+
 ## Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.vc_call_vol_steps=7 \
