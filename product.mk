@@ -64,3 +64,9 @@ ifneq ($(PRODUCT_IS_ATV),true)
 -include vendor/google_pixel/product.mk
 endif # PRODUCT_IS_ATV
 endif # WITH_GMS
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    root/adb_keys \
+    system/bin/ih8sn \
+    system/etc/ih8sn.conf \
+    system/etc/init/ih8sn.rc
