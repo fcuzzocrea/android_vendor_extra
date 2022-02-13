@@ -32,9 +32,9 @@ PRODUCT_COPY_FILES += \
 endif
 
 ## Media
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.vc_call_vol_steps=7 \
-    ro.config.media_vol_steps=25
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.config.vc_call_vol_steps=7 \
+#    ro.config.media_vol_steps=25
 
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
