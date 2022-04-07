@@ -10,12 +10,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.adb.shell=/system/xbin/bash
 
-## Custom Cameras
-# river
-ifneq ($(filter %river,$(TARGET_PRODUCT)),)
--include vendor/extra/oem-cameras/MotCamera2-denali/MotCamera2-denali.mk
-endif
-
 ## fastbootd
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
