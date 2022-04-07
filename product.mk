@@ -46,6 +46,10 @@ ifneq ($(filter %flo %flox %gts4lvwifi %icosa,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += remove-telephony
 endif
 
+## SUW
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    setupwizard.feature_deferred_snooze_allow_never=true
+
 ## Updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater-api.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.allow_downgrading=true
