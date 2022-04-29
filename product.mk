@@ -10,6 +10,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.adb.shell=/system/xbin/bash
 
+## Device-specific
+ifneq ($(filter %TP1803,$(TARGET_PRODUCT)),)
+# TP1803 Camera Additions
+PRODUCT_PACKAGES += \
+    testsig-tp1803
+endif
+
 ## fastbootd
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
