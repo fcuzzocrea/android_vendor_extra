@@ -6,6 +6,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
 
+## ATV
+PRODUCT_PACKAGES += \
+    DocumentsUI
+
 ## Bash
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.adb.shell=/system/xbin/bash
