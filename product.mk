@@ -22,8 +22,11 @@ PRODUCT_PACKAGES += \
 endif
 
 ## fastbootd
+# Doesn't fit on walleye
+ifeq ($(filter %walleye,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
+endif
 
 ## ih8sn
 PRODUCT_PACKAGES += ih8sn
