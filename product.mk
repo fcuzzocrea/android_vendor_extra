@@ -12,7 +12,7 @@ PRODUCT_PACKAGES += \
 
 ## Bash
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.sys.adb.shell=/system/xbin/bash
+    persist.sys.adb.shell=/system_ext/bin/bash
 
 ## Device-specific
 ifneq ($(filter %TP1803,$(TARGET_PRODUCT)),)
