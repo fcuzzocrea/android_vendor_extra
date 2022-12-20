@@ -23,7 +23,7 @@ endif
 
 ## fastbootd
 # Doesn't fit on walleye
-ifeq ($(filter %walleye,$(TARGET_PRODUCT)),)
+ifeq ($(filter %taimen %walleye,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
 endif
