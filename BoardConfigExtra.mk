@@ -4,7 +4,7 @@ ifndef TARGET_COPY_OUT_PRODUCT
 endif
 
 # Recovery
-BOARD_USES_FULL_RECOVERY_IMAGE ?= true
+#BOARD_USES_FULL_RECOVERY_IMAGE ?= true
 
 # System_ext
 ifndef TARGET_COPY_OUT_SYSTEM_EXT
