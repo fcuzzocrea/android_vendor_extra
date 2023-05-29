@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
 
 ## Remove Dialer Apps
 ifneq ($(filter %shieldtablet %yellowstone,$(TARGET_PRODUCT)),)
