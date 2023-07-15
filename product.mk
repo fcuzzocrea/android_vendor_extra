@@ -56,7 +56,7 @@ PRODUCT_PACKAGES += remove-dialer
 endif
 
 ## Remove Telephony Apps
-ifneq ($(filter %flo %flox %gts4lvwifi %icosa,$(TARGET_PRODUCT)),)
+ifneq ($(filter %flo %flox %deb %debx %nx %nx_tab %sphynx,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += remove-telephony
 endif
 
