@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
 #    ro.config.vc_call_vol_steps=7 \
 #    ro.config.media_vol_steps=25
 
+## neofetch
+PRODUCT_COPY_FILES += \
+    vendor/extra/tools/neofetch:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/neofetch
+
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
