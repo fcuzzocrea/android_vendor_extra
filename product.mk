@@ -54,16 +54,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 ## Recovery
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
 
-## Remove Dialer Apps
-ifneq ($(filter %shieldtablet %yellowstone,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += remove-dialer
-endif
-
-## Remove Telephony Apps
-ifneq ($(filter %flo %flox %deb %debx %nx %nx_tab %sphynx,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += remove-telephony
-endif
-
 ## SUW
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     setupwizard.feature_deferred_snooze_allow_never=true
