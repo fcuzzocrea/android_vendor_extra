@@ -64,6 +64,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.allow_downgrading=true
 
 ## Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
+PRODUCT_OTA_PUBLIC_KEYS := vendor.certs/otakey.x509.pem
 
 ifeq ($(WITH_GMS),true)
 ifneq ($(PRODUCT_IS_ATV),true)
