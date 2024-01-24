@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter TP1803,$(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := testsig-tp1803
+LOCAL_MODULE := testsig-0x7b401d7c
 LOCAL_MODULE_OWNER := nubia
 LOCAL_SRC_FILES := TP1803/testsig-0x7b401d7c.so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES

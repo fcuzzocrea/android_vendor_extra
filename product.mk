@@ -18,7 +18,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ifneq ($(filter %TP1803,$(TARGET_PRODUCT)),)
 # TP1803 Camera Additions
 PRODUCT_PACKAGES += \
-    testsig-tp1803
+    testsig-0x7b401d7c
 endif
 
 ## fastbootd
