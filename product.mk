@@ -68,7 +68,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.allow_downgrading=true
 
 ifeq ($(WITH_GMS),true)
 ifneq ($(PRODUCT_IS_ATV),true)
+ifneq ($(PRODUCT_IS_AUTO),true)
 -include vendor/google_pixel/product.mk
+endif # PRODUCT_IS_AUTO
 endif # PRODUCT_IS_ATV
 endif # WITH_GMS
 
