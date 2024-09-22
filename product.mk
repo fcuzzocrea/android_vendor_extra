@@ -14,6 +14,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.adb.shell=/system_ext/bin/bash
 
+## Debugging
+ifeq ($(filter %foster %foster_tab %sif %sphynx %nx %nx_tab,$(TARGET_PRODUCT)),)
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += log.tag=I
+endif
+endif
+
 ## Device-specific
 ifneq ($(filter %TP1803,$(TARGET_PRODUCT)),)
 # TP1803 Camera Additions
