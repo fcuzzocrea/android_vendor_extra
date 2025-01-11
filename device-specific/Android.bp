@@ -1,0 +1,7 @@
+prebuilt_rfsa {
+    name: "testsig-0x7b401d7c",
+    owner: "nubia",
+    srcs: ["TP1803/testsig-0x7b401d7c.so"],
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
