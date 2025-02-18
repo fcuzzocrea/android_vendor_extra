@@ -66,8 +66,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     setupwizard.feature_deferred_snooze_allow_never=true
 
 ## Updater
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater-api.oddsolutions.us/api/v1/{device}/{type}/{incr}"
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.allow_downgrading=true
+PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.uri="https://updater-api.oddsolutions.us/api/v1/{device}/{type}/{incr}"
+PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.allow_downgrading=true
+PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.allow_major_upgrades
 
 ## Signing
 #PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey
