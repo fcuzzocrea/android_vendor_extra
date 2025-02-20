@@ -27,6 +27,10 @@ ifneq ($(filter %TP1803,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
     testsig-0x7b401d7c
 endif
+# sif ADB over Wi-Fi/Ethernet
+ifneq ($(filter %sif,$(TARGET_PRODUCT)),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += service.adb.tcp.port=5555
+endif
 
 ## fastbootd
 # Doesn't fit on walleye
