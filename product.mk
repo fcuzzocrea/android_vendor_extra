@@ -31,6 +31,10 @@ endif
 ifneq ($(filter %sif,$(TARGET_PRODUCT)),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += service.adb.tcp.port=5555
 endif
+# radxa02 USB keyboard instead of remote
+ifneq ($(filter %radxa02,$(TARGET_PRODUCT)),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += atv.setup.bt_remote_pairing=false
+endif
 
 ## fastbootd
 # Doesn't fit on walleye
