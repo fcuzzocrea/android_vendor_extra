@@ -42,13 +42,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_allow_spl_downgrade
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     setupwizard.feature_deferred_snooze_allow_never=true
 
-ifeq ($(WITH_GMS),true)
-ifneq ($(PRODUCT_IS_ATV),true)
-ifneq ($(PRODUCT_IS_AUTOMOTIVE),true)
-$(call inherit-product, vendor/google_pixel/products/google_pixel.mk)
-endif # PRODUCT_IS_AUTOMOTIVE
-endif # PRODUCT_IS_ATV
-endif # WITH_GMS
+#ifeq ($(WITH_GMS),true)
+#ifneq ($(PRODUCT_IS_ATV),true)
+#ifneq ($(PRODUCT_IS_AUTOMOTIVE),true)
+#$(call inherit-product, vendor/google_pixel/products/google_pixel.mk)
+#endif # PRODUCT_IS_AUTOMOTIVE
+#endif # PRODUCT_IS_ATV
+#endif # WITH_GMS
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     root/adb_keys \
