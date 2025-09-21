@@ -71,6 +71,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_allow_spl_downgrade=true
 
 ## SUW
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
