@@ -54,9 +54,6 @@ PRODUCT_COPY_FILES += \
     vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
 #endif
 
-## Logging
-$(call soong_config_set,liblog,force_debuggable,true)
-
 ## Media
 #PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #    ro.config.vc_call_vol_steps=7 \
