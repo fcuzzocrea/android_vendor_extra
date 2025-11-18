@@ -79,14 +79,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.allow_major_upgrades
 #PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey
 #PRODUCT_OTA_PUBLIC_KEYS := vendor/lineage-priv/keys/otakey.x509.pem
 
-ifeq ($(WITH_GMS),true)
-ifneq ($(PRODUCT_IS_ATV),true)
-ifneq ($(PRODUCT_IS_AUTOMOTIVE),true)
--include vendor/google_pixel/product.mk
-endif # PRODUCT_IS_AUTOMOTIVE
-endif # PRODUCT_IS_ATV
-endif # WITH_GMS
-
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     root/adb_keys \
     system/bin/ih8sn \
