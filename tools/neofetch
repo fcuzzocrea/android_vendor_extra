@@ -4791,8 +4791,8 @@ get_user_config() {
         config_file="${XDG_CONFIG_HOME}/neofetch/config.conf"
 
         # The config file doesn't exist, create it.
-        mkdir -p "${XDG_CONFIG_HOME}/neofetch/"
-        printf '%s\n' "$config" > "$config_file"
+        #mkdir -p "${XDG_CONFIG_HOME}/neofetch/"
+        #printf '%s\n' "$config" > "$config_file"
     fi
 }
 
