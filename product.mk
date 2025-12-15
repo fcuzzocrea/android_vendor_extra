@@ -8,6 +8,9 @@ PRODUCT_COPY_FILES += \
 # Root by default
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/adbroot_onboot.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/adbroot_onboot.rc
+# System Artifact Allowances
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    root/adb_keys
 
 ## ATV
 PRODUCT_PACKAGES += \
@@ -45,18 +48,13 @@ endif
 ## ih8sn
 PRODUCT_PACKAGES += ih8sn
 
-#ifneq ("$(wildcard  vendor/extra/configs/ih8sn/ih8sn_$(subst lineage_,,$(TARGET_PRODUCT)).conf)","")
-#PRODUCT_COPY_FILES += \
-#    vendor/extra/configs/ih8sn/ih8sn_$(subst lineage_,,$(TARGET_PRODUCT)).conf:/system/etc/ih8sn.conf
-#else
 PRODUCT_COPY_FILES += \
     vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
-#endif
 
-## Media
-#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-#    ro.config.vc_call_vol_steps=7 \
-#    ro.config.media_vol_steps=25
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/ih8sn \
+    system/etc/ih8sn.conf \
+    system/etc/init/ih8sn.rc
 
 ## neofetch
 PRODUCT_COPY_FILES += \
@@ -77,13 +75,3 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.uri="https://updater-api.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.allow_downgrading=true
 PRODUCT_SYSTEM_EXT_PROPERTIES += lineage.updater.allow_major_upgrades
-
-## Signing
-#PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey
-#PRODUCT_OTA_PUBLIC_KEYS := vendor/lineage-priv/keys/otakey.x509.pem
-
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    root/adb_keys \
-    system/bin/ih8sn \
-    system/etc/ih8sn.conf \
-    system/etc/init/ih8sn.rc
