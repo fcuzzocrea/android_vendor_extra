@@ -1,10 +1,13 @@
-## ADB Keys
+## ADB
 # Android
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:root/adb_keys
 # Recovery
 PRODUCT_COPY_FILES += \
     vendor/extra/adb_keys:recovery/root/adb_keys
+# Root by default
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/adbroot_onboot.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/adbroot_onboot.rc
 
 ## ATV
 PRODUCT_PACKAGES += \
