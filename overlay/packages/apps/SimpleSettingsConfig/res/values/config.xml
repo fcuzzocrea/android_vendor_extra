@@ -4,6 +4,14 @@
         <item>global/adb_enabled=1</item>
         <item>global/adb_allowed_connection_time=0</item>
         <item>global/development_settings_enabled=1</item>
+        <item>secure/doze_enabled=0</item>
+        <item>secure/doze_pulse_on_pick_up=0</item>
+        <item>secure/night_display_activated=1</item>
+        <item>secure/night_display_auto_mode=2</item>
+        <item>secure/ui_night_mode=0</item>
+        <item>secure/ui_night_mode_override_on=1</item>
         <item>system/screen_off_timeout=300000</item>
+        <item>lineage_secure/advanced_reboot=1</item>
+        <item>lineage_system/battery_light_enabled=0</item>
     </string-array>
 </resources>

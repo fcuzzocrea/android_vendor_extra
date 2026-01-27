@@ -61,7 +61,11 @@ PRODUCT_COPY_FILES += \
     vendor/extra/tools/neofetch:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/neofetch
 
 ## Overlays
+ifeq ($(PRODUCT_IS_ATV),true)
+PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay-tv
+else
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
+endif
 
 ## Recovery
 PRODUCT_SYSTEM_EXT_PROPERTIES += persist.vendor.recovery_update=true
