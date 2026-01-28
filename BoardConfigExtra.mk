@@ -12,5 +12,4 @@ ifndef TARGET_COPY_OUT_SYSTEM_EXT
 endif
 
 ## SELinux
-PRODUCT_PRIVATE_SEPOLICY_DIRS += vendor/extra/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/extra/sepolicy/vendor
